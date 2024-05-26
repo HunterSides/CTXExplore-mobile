@@ -1,0 +1,85 @@
+{
+  "expo": {
+    "name": "CTX Mobile",
+    "slug": "CTXmobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/ctx-logo-blue.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/ctx-logo-blue.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mobile.ctx",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Allow $(PRODUCT_NAME) to use Face ID"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/ctx-logo-blue.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.mobile.ctx",
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "server",
+      "favicon": "./assets/images/ctx-logo-blue.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {}
+      ],
+      "expo-secure-store",
+      [
+        "expo-local-authentication",
+        {
+          "fingerprintPermission": "Allow $(PRODUCT_NAME) to use fingerprint sensor."
+        }
+      ],
+      [
+        "expo-dynamic-app-icon",
+        {
+          "default": {
+            "image": "./assets/images/ctx-logo-blue.png",
+            "prerendered": true
+          },
+          "dark": {
+            "image": "./assets/images/ctx-logo-white.png",
+            "prerendered": true
+          },
+          "vivid": {
+            "image": "./assets/images/ctx-logo-blue.png",
+            "prerendered": true
+          }
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "6198b255-5836-40f2-b541-f8d6a2ebf74c",
+        
+      }
+    }
+  }
+}
